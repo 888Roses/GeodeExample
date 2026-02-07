@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "geode_example",
+  "version": "${version}",
+  "name": "Geode Example",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/geode_example/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "fabric-datagen": [
+      "dev.rosenoire.geode_example.data.GeodeExampleDataGenerator"
+    ],
+    "client": [
+      "dev.rosenoire.geode_example.client.GeodeExampleClient"
+    ],
+    "main": [
+      "dev.rosenoire.geode_example.common.GeodeExample"
+    ]
+  },
+  "mixins": [
+    "geode_example.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
